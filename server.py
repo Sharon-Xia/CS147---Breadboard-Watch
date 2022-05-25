@@ -1,4 +1,5 @@
 """
+run this before executing:
 export FLASK_APP=server.py
 python3 -m flask run --host=0.0.0.0
 """
@@ -14,5 +15,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-	print(request.args.get("var"))
-	return "We received value: "+str(request.args.get("var"))
+	print(request.args.get("steps"))
+	return "We received value: "+str(request.args.get("steps"))
+
+
+# load past user data into server from files
+
+# after receiving data, update in files 
